@@ -1,0 +1,10 @@
+RewriteEngine on
+RewriteBase /
+RewriteCond %{REQUEST_FILENAME} -f //如果文件存在直接访问文件
+RewriteCond %{REQUEST_FILENAME} -d //如果目录在就直接访问目录
+RewriteCond !^.(\.css|\.js|\.gif|.png|\.jpg|\.jpeg)$ //如果是这些后缀的直接访问文件
+
+//RewriteRule ^(index\.php)(?+)(.*)$ /index.php?$3 [L]
+//RewriteRule ^(.*)$ /index.php?$1 [L]
+//RewriteRule ^index.php$ index2.php?$1 [L]
+
